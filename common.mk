@@ -277,9 +277,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/pineapple/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+ifneq ($(filter ruyi zorn manet,$(TARGET_DEVICE)),)
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.default
+endif
 
 # RIL
 PRODUCT_PACKAGES += \
