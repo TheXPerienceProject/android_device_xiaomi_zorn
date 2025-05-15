@@ -1869,3 +1869,11 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Xiaomi MAC address
 vendor/bin/nv_mac
+
+# Misc
+odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
+odm/lib64/vendor.xiaomi.hardware.framecapturemanager-V1-ndk.so
+odm/lib64/libfcmintf.so
+odm/lib64/libframecapturemanager.so
+odm/lib64/libbarrage.so
+vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
