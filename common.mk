@@ -185,6 +185,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.xiaomi \
     android.hardware.health-service.xiaomi_recovery
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,////$(COMMON_PATH):libinit_xiaomi_8650)
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
