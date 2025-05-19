@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+COMMON_PATH := device/xiaomi/sm8650-common
+
 # Call the proprietary setup.
 $(call inherit-product, vendor/xiaomi/sm8650-common/sm8650-common-vendor.mk)
 
@@ -188,7 +190,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.xiaomi_recovery
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,////$(COMMON_PATH):libinit_xiaomi_8650)
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_xiaomi_8650)
 
 # IPACM
 PRODUCT_PACKAGES += \
