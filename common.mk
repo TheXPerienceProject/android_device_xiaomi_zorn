@@ -118,6 +118,22 @@ PRODUCT_COPY_FILES += \
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common-V1-ndk.vendor \
+    android.hardware.camera.device-V2-ndk.vendor \
+    android.hardware.camera.metadata-V2-ndk.vendor \
+    android.hardware.camera.provider-V2-ndk.vendor \
+    vendor.qti.hardware.camera.aon-V1-ndk.vendor \
+    vendor.qti.hardware.camera.offlinecamera-V1-ndk.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -164,6 +180,7 @@ PRODUCT_COPY_FILES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V2-ndk.vendor \
+    android.hardware.graphics.common-V4-ndk.vendor \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
