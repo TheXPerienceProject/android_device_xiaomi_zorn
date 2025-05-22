@@ -187,6 +187,15 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh \
     libgralloc.qti \
     libqdMetaData \
+    vendor.qti.hardware.display.allocator@4.0.vendor \
+    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor \
+    vendor.qti.hardware.display.config-V7-ndk.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor \
+    vendor.qti.hardware.display.postproc-V1-ndk.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor \
     vendor.qti.hardware.display.composer-service.rc \
