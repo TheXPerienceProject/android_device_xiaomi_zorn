@@ -653,11 +653,6 @@ vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so
 # ESE powermanager
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
-# Fingerprint
-vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so
-odm/etc/vintf/manifest/fod-aidl.xml
-
 # FM
 vendor/etc/init.qti.fm.sh
 vendor/etc/init/init.qti.fm.rc
