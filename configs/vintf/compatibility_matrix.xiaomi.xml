@@ -1,32 +1,5 @@
 <compatibility-matrix version="7.0" type="framework">
     <hal format="hidl" optional="true">
-        <name>com.fingerprints.extension</name>
-        <version>3.0</version>
-        <interface>
-            <name>IFingerprintSensorTest</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>com.fingerprints.extension</name>
-        <version>3.0</version>
-        <interface>
-            <name>IFingerprintNavigation</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>com.fingerprints.extension3</name>
-        <interface>
-            <name>IFingerprintNavigation</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IFingerprintSensorTest</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.dolby.hardware.dms</name>
         <version>2.0</version>
         <interface>
@@ -177,36 +150,6 @@
         <version>1.0</version>
         <interface>
             <name>IFbo</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.fingerprintextension</name>
-        <version>1.0</version>
-        <interface>
-            <name>IXiaomiFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.fingerprintextension</name>
-        <interface>
-            <name>IXiaomiFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.fx.tunnel</name>
-        <version>1.0</version>
-        <interface>
-            <name>IMiFxTunnel</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.fx.tunnel</name>
-        <interface>
-            <name>IMiFxTunnel</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -583,13 +526,6 @@
         <name>vendor.xiaomi.hw.touchfeature</name>
         <interface>
             <name>ITouchFeature</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>com.fingerprints.fpc.extension</name>
-        <interface>
-            <name>IFpcExtension</name>
             <instance>default</instance>
         </interface>
     </hal>

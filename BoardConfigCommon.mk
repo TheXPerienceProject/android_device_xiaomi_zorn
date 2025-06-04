@@ -32,7 +32,7 @@ AB_OTA_PARTITIONS += \
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv9-a
+TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo300
@@ -160,9 +160,6 @@ TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/properties/vendor.prop
-
-# Power
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
 
 # Powershare
 TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode

@@ -1,5 +1,37 @@
 <compatibility-matrix version="7.0" type="framework">
     <hal format="aidl" optional="true">
+        <name>vendor.xiaomi.hardware.fingerprintextension</name>
+        <interface>
+            <name>IXiaomiFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <interface>
+            <name>IMiFxTunnel</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>com.fingerprints.extension3</name>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>com.fingerprints.fpc.extension</name>
+        <interface>
+            <name>IFpcExtension</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>android.hardware.authsecret.qti.spu</name>
         <interface>
             <name>IAuthSecret</name>
