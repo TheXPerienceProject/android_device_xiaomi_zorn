@@ -56,7 +56,7 @@ debug.sf.set_idle_timer_ms=110
 # Fingerprint
 persist.vendor.sys.fp.expolevel=0x88
 persist.vendor.fingerprint.type=udfps
-persist.vendor.fingerprint.sensor_location=610|2437|105
+persist.vendor.fingerprint.sensor_location=725|2400|105
 
 # Qti
 ro.vendor.qti.va_odm.support=1
