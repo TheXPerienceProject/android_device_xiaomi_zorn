@@ -65,6 +65,8 @@ import /vendor/etc/init/hw/init.batterysecret.rc
 import /vendor/etc/init/hw/init.charge_logger.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.xiaomi.rc
+import /vendor/etc/init/hw/init.fingerprint.rc
+
 
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
