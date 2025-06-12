@@ -12,6 +12,7 @@
 /mnt/vendor/persist/camera(/.*)?                                              u:object_r:camera_persist_file:s0
 /persist/camera(/.*)?                                                         u:object_r:camera_persist_file:s0
 /vendor/bin/dc_cal                                                            u:object_r:DualCameraCal_exec:s0
+/vendor/lib(64)?/libutils\.so                                                 u:object_r:same_process_hal_file:s0
 
 # Display
 /sys/class/backlight(/.*)?                                                                u:object_r:vendor_sysfs_graphics:s0
