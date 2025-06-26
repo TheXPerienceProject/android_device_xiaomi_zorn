@@ -883,7 +883,6 @@ odm/lib64/hw/consumerir.qcom.so
 # Init
 vendor/bin/init.class_main.sh
 vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.early_boot.sh
 vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qcom.sh
 vendor/etc/init/hw/init.qcom.rc

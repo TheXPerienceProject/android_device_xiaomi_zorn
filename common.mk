@@ -317,6 +317,7 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.qcom.early_boot.sh \
     init.fingerprint.rc \
     init.recovery.qcom.rc \
     init.target.rc \
