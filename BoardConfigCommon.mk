@@ -38,6 +38,9 @@ TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo300
 
 # Audio
+$(call soong_config_set, android_hardware_audio, run_64bit, true)
+
+# Audio
 AUDIO_FEATURE_ENABLED_DLKM := true
 #AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
