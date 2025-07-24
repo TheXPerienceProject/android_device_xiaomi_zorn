@@ -84,7 +84,6 @@ vendor/lib64/libagm.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio
-odm/etc/audio/silent-3sec.wav
 odm/lib64/libaudioroute_ext.so
 odm/lib64/libcrussp.so;DISABLE_CHECKELF
 odm/lib64/libvoipspacespeech.so
@@ -231,7 +230,6 @@ odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
 odm/etc/vintf/manifest/vendor.xiaomi.camera.aon-impl.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.aidlbgservice-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
-vendor/framework/androidx.camera.extensions.impl.jar
 
 # Camera Firmware
 odm/firmware/CAMERA_ICP_170.elf
@@ -980,7 +978,6 @@ vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_core.so
 vendor/lib64/libqcodec2_cvpfilter.so
 vendor/lib64/libqcodec2_dolbydecoderfilter.so
-vendor/lib64/libqcodec2_dolbyencoderfilter.so
 vendor/lib64/libqcodec2_filterbase.so
 vendor/lib64/libqcodec2_hooks.so
 vendor/lib64/libqcodec2_imgtxrfilter.so
@@ -1012,7 +1009,6 @@ vendor/lib64/libdeccfg.so
 vendor/lib64/libdolbyclstc.so
 vendor/lib64/libdolbydecoderprocessor.so
 vendor/lib64/libdolbyeglcore.so
-vendor/lib64/libdolbyencoderprocessor.so
 vendor/lib64/libdolbyottcameracontrol.so
 
 # Memtrack
@@ -1315,7 +1311,6 @@ vendor/lib64/libqmiservices.so
 
 # QSAP
 vendor/bin/qsap_dcfd
-vendor/bin/qsap_location
 vendor/bin/qsap_qapeservice
 vendor/bin/qsap_sensors
 vendor/bin/qsap_voiceui
@@ -1744,7 +1739,6 @@ odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature-service.xml
 odm/lib64/libtensorflowlite_touch_c.so
 odm/lib64/libtouchreport.so
-odm/lib64/libtouchsensor.so
 vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk_platform.so
 
 # Trusted Execution Environment connector
