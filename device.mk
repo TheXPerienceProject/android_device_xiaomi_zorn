@@ -83,6 +83,8 @@ PRODUCT_PACKAGES += \
     libaudiochargerlistener \
     libaudioroute.vendor \
     libbatterylistener \
+    libaudiochargerlistener \
+    libaudioroute.vendor \
     libpalclient \
     libfmpal \
     libhfp_pal \
@@ -91,10 +93,12 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndcardparser \
     libvolumelistener \
+    libtinycompress \
     libhfp_pal \
     libfmpal \
+    vendor.qti.hardware.AGMIPC@1.0 \
     vendor.qti.hardware.AGMIPC@1.0-impl \
-    vendor.qti.hardware.pal@1.0.vendor
+    vendor.qti.audio-adsprpc-service.rc
 
 PRODUCT_PACKAGES += \
     libar-acdb \
