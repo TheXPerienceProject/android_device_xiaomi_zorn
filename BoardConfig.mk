@@ -81,18 +81,7 @@ BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 # Init
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_8650
 
-# Kernel
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_RAMDISK_USE_LZ4 := true
-TARGET_NEEDS_DTBOIMAGE := true
-
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_IMAGE_NAME := Image
-
-BOARD_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
-
+# Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
@@ -106,43 +95,35 @@ PRODUCT_COPY_FILES += \
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
-    swinfo.fingerprint=zorn:$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=zorn:$(LINEAGE_VERSION)
+    disable_dma32=on \
+    swinfo.fingerprint=$(LINEAGE_VERSION) \
+    mtdoops.fingerprint=$(LINEAGE_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
-    androidboot.console=0 \
+    androidboot.hypervisor.protected_vm.supported=0 \
+    androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.load_modules_parallel=true \
     androidboot.vendor.qspa=true \
-    androidboot.hypervisor.protected_vm.supported=false
+    androidboot.console=0
 
-# Kernel (prebuilt)
-PREBUILT_PATH := device/xiaomi/zorn-kernel
-TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
-BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
-BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
-PRODUCT_COPY_FILES += \
-	$(PREBUILT_PATH)/images/kernel:kernel
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 # Kernel modules
-DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
-RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
-SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/6.1.75-android14-11-g16c5f6cd5e9b-ab12268515
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_PATH)/vendor_ramdisk/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk/modules.load.recovery))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_dlkm/modules.load))
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.75-android14-11-g16c5f6cd5e9b-ab12268515/)
-
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
-
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
+    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm_flatten/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/flatten/lib/modules) \
+    $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.118-android14-11-ga3b9c44908dd-ab13320413)
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED  := 0
