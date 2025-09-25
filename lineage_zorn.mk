@@ -22,9 +22,9 @@ PRODUCT_MODEL := 24117RK2CG
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc=$(call normalize-path-list, "zorn miproduct 15 AQ3A.240627.003 OS2.0.200.4.VNCCNXM release-keys")
+    BuildDesc=$(call normalize-path-list, "zorn zorn 15 AQ3A.240829.003 OS2.0.202.0.VOKMIXM release-keys")
 
-BUILD_FINGERPRINT := Xiaomi/zorn/miproduct:15/AQ3A.240627.003/OS2.0.200.4.VNCCNXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/zorn/zorn:15/AQ3A.240829.003/OS2.0.202.0.VOKMIXM:user/release-keys
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
