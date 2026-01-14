@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_zorn.mk
+    $(LOCAL_DIR)/xperience_zorn.mk
 

@@ -8,15 +8,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common XPerience stuff.
+$(call inherit-product, vendor/xperience/config/common.mk)
 
 # Inherit from zorn device.
 $(call inherit-product, device/xiaomi/zorn/device.mk)
 
+TARGET_BOOT_ANIMATION_SIZE :=  1440
+
 ## Device identifier
 PRODUCT_DEVICE := zorn
-PRODUCT_NAME := lineage_zorn
+PRODUCT_NAME := xperience_zorn
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24117RK2CG
 PRODUCT_MANUFACTURER := xiaomi
