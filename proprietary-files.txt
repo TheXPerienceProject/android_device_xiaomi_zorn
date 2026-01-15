@@ -1472,6 +1472,7 @@ vendor/lib64/libmialgo.so
 vendor/lib64/libmidebuggerdimpl_vendor.so;DISABLE_CHECKELF
 vendor/lib64/libmilut.so
 vendor/lib64/libmips.so
+vendor/lib64/libmirf.so
 vendor/lib64/libmisr.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
