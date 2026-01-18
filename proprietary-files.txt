@@ -1563,7 +1563,7 @@ odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 
-# CNE
+# CNE - from WOKMIMX
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
@@ -1729,7 +1729,7 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/bin/hw/android.hardware.contexthub-service.qmi
 vendor/etc/chre/preloaded_nanoapps.json
 
-# Data
+# Data - from WOKMIMX
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/port-bridge
@@ -1977,7 +1977,7 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 
-# DPM
+# DPM - from WOKMIMX
 vendor/bin/dpmQmiMgr
 vendor/bin/vendor.dpmd
 vendor/etc/dpm_vndr/vendor.dpm.conf
@@ -2013,7 +2013,7 @@ vendor/etc/init/vendor.rongcard.eid@1.0-service.rc
 vendor/etc/vintf/manifest/eid-default.xml
 vendor/lib64/vendor.rongcard.eid-V1-ndk_platform.so
 
-# EMBMS
+# EMBMS - from WOKMIMX
 vendor/bin/embmsslServer
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.embmssl.xml
@@ -2169,7 +2169,7 @@ vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/libqtiidentitycredential.so
 
-# IMS
+# IMS - from WOKMIMX
 system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
@@ -2588,7 +2588,7 @@ vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
-# Peripheral manager
+# Peripheral manager - from WOKMIMX
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/bin/pm_ioctl_app
@@ -2661,7 +2661,7 @@ vendor/bin/qguard
 vendor/etc/init/qguard.rc
 vendor/etc/qguard.json
 
-# QMI
+# QMI - from WOKMIMX
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
 vendor/bin/qmi-framework-tests/qmi_test_mt_client_init_instance
@@ -2787,7 +2787,7 @@ vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
 
-# RIL
+# RIL - from WOKMIMX
 odm/etc/me_config.xml
 odm/etc/MESubway_prebuilt.db
 product/app/uimgbaservice/uimgbaservice.apk
